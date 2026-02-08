@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+
+  <!-- ===== BACKGROUND ===== -->
+  <rect width="256" height="256" rx="48" ry="48" fill="#1a1b26"></rect>
+
+  <!-- ===== LETTER G ===== -->
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-family="0xNerdFontProto, 'Nerd Font', monospace" font-size="250" font-weight="700" fill="#7dcfff" letter-spacing="-6">
+    G
+  </text>
+
+</svg>
