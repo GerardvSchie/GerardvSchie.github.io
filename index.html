@@ -1,12 +1,38 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Gerard van Schie, Full Stack Developer with Angular, Typecript, and Java experience.
+      Specializing in algorithms, system design, and maintiable software.">
+
     <title>Gerard van Schie</title>
+    <!-- Early styling to reduce flickering -->
+    <style>
+    html {
+      font-size: 17px;
+      font-family: monospace;
+      background: #1a1b26;
+      color: #c0caf5;
+    }
+    </style>
     <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="preload" href="assets/0xProto/0xProtoNerdFont-Regular_subset.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
-    <link href="assets/fontawesome-free-7.1.0-web/css/fontawesome.css" rel="stylesheet" />
-    <link href="assets/fontawesome-free-7.1.0-web/css/brands.css" rel="stylesheet" />
-    <link href="assets/fontawesome-free-7.1.0-web/css/solid.css" rel="stylesheet" />
+
+    <!-- Load the rest async, doesn't block rendering of the HTML -->
+    <link rel="preload" href="assets/fontawesome-free-7.1.0-web/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/fontawesome-free-7.1.0-web/css/brands.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/fontawesome-free-7.1.0-web/css/solid.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+      <link rel="stylesheet" href="assets/fontawesome-free-7.1.0-web/css/fontawesome.css">
+      <link rel="stylesheet" href="assets/fontawesome-free-7.1.0-web/css/brands.css">
+      <link rel="stylesheet" href="assets/fontawesome-free-7.1.0-web/css/solid.css">
+    </noscript>
+
+    <script src="index.js" defer></script>
   </head>
   <body>
     <div class="flex-with-sidebar">
@@ -14,7 +40,7 @@
         <div class="sidebar-content">
           <div>
             <header>
-              <h1>Gerard van Schie</h1>
+              <h1 class="highlight">Gerard van Schie</h1>
               <span id="subtitle">Full-Stack Developer</span>
               <p id="quote">
                 I build reliable software systems
@@ -22,38 +48,30 @@
                 with clean, maintainable code.
               </p>
             </header>
-            <nav aria-hidden="true">
+            <nav>
               <ol>
                 <li>
                   <a href="#about">
-                    <div aria-hidden="true">
-                      <hr>
-                    </div>
-                    <span>About</span>
+                    <span class="nav-line" aria-hidden="true"></span>
+                    <span class="nav-text">About</span>
                   </a>
                 </li>
                 <li>
                   <a href="#education">
-                    <div aria-hidden="true">
-                      <hr>
-                    </div>
-                    <span>Education</span>
+                    <span class="nav-line" aria-hidden="true"></span>
+                    <span class="nav-text">Education</span>
                   </a>
                 </li>
                 <li>
                   <a href="#experience">
-                    <div aria-hidden="true">
-                      <hr>
-                    </div>
-                    <span>Experience</span>
+                    <span class="nav-line" aria-hidden="true"></span>
+                    <span class="nav-text">Experience</span>
                   </a>
                 </li>
                 <li>
                   <a href="#projects">
-                    <div aria-hidden="true">
-                      <hr>
-                    </div>
-                    <span>Projects</span>
+                    <span class="nav-line" aria-hidden="true"></span>
+                    <span class="nav-text">Projects</span>
                   </a>
                 </li>
               </ol>
@@ -61,13 +79,13 @@
           </div>
           <ul id="social-media" aria-label="Social media">
             <li>
-              <a href="https://github.com/GerardvSchie" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="https://github.com/GerardvSchie" target="_blank" aria-label="GitHub (opens in a new tab)"><i class="fa-brands fa-github"></i></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/gerard-van-schie-6263b4215" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/gerard-van-schie-6263b4215" target="_blank" aria-label="LinkedIn (opens in a new tab)"><i class="fa-brands fa-linkedin"></i></a>
             </li>
             <li>
-              <a href="https://www.goodreads.com/user/show/193452034-gerard" target="_blank"><i class="fa-brands fa-goodreads"></i></a>
+              <a href="https://www.goodreads.com/user/show/193452034-gerard" target="_blank" aria-label="Goodreads (opens in a new tab)"><i class="fa-brands fa-goodreads"></i></a>
             </li>
           </ul>
         </div>
@@ -75,29 +93,24 @@
       <main class="content">
         <div>
           <section id="about">
-            <div>
-              <h2><span>ABO</span>UT</h2>
-              <hr aria-hidden="true">
-            </div>
             <article>
               <p>
-                I'm a full stack developer with a specialty in programming technology and algorithms. I focus on building reliable and maintainable code
-                I enjoy working on complex problems and making them easier to understand and maintain. Building software solutions for production environments.
+                I am a Full Stack Developer specialized in <span class="highlight">algorithms</span>, <span class="highlight">system design</span>, and <span class="highlight">maintainable software</span>. I focus on building reliable,
+                production-ready solutions and am passionate about solving <span class="highlight">complex problems</span> by making them clear, scalable, and easy to maintain.
+                I actively seek challenging environments and projects where I can improve my skills, and contribute meaningful solutions.
               </p>
               <p>
-                Currently, I'm a Medior Full Stack Developer at <a class="link" href="https://www.nexus-nederland.nl" target="_blank">Nexus Nederland</a>, where I work on web applications for Dutch Mental Healthcare institutes.
-                In this role I build code for critical software supporting health care workers.
-                Alongside I improve the way of working for myself and colleagues, building useful tools to improve work efficiency.
-                I make sure everyone is able to use my solutions, whilst simultaniously ensuring delivery and keeping promises.
+                Currently, I work as a Medior Full Stack Developer at <a class="highlight" href="https://www.nexus-nederland.nl" target="_blank">Nexus Nederland</a>
+                developing web applications for Dutch mental health institutes. I build and maintian <span class="highlight">critical systems</span> that support healthcare proffesionals daily.
+                In addition, I build <span class="highlight">internal tools</span> to improve efficiency and workflows, ensuring reliable delivery and improving communication within and outside of the team.
               </p>
               <p>
-                Previously I've worked at several companies during the university summers. I learned a lot about different technology stacks used at companies
-                and have focussed on these areas during the courses. Putting a lot of effort into CI/CD and Docker for containerization and isolated builds.
-                Additionally I have learned how to identify areas of improvement at a larger scale and how to communicate them to stakeholders.
-                Making a lasting impact in a short time.
+                During my university years, I gained experience at multiple companies, working on diverse projects using different technology stacks.
+                I developed strong familiarity with <span class="highlight">CI/CD pipelines</span>, <span class="highlight">Docker</span>, and development tools. Also, I learned to identify
+                <span class="highlight">actional opportunities for improvement</span> and effectively communicated them to technical and non-technical stakeholders.
               </p>
               <p>
-                Outside of work I can be found doing sports like biking, hiking, or running. Hanging out with my friends, reading a book or helping others.
+                Outside of work, I enjoy cycling, hiking, and running, spending time with friends, and reading.
               </p>
             </article>
           </section>
@@ -132,7 +145,7 @@
             </article>
             <article class="section-item">
               <div class="year">
-                2018 - 2021
+                <time datetime="2018">2018</time> - <time datetime="2021">2021</time>
               </div>
               <div>
                 <h3>Bachelor's Computer Science | Utrecht University</h3>
@@ -174,7 +187,7 @@
             </div>
             <article class="section-item">
               <div class="year">
-                Dec 2023 - Present
+                <time datetime="2023-12">Dec 2023</time> - <time datetime="present">Present</time>
               </div>
               <div>
                 <h3><a class="link" href="https://www.nexus-nederland.nl" target="_blank">Medior Full Stack Developer | NEXUS Nederland <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
@@ -182,7 +195,7 @@
                   Build, migrate and maintain critical components of a complete Mental Health Care web platform.
                   Advised on the implementation of an automated front-end testing using Playwright and created a scalable mono-repository setup.
                   Expanded the team's owned products whilst increasing speed of delivery and reducing QA test findings.
-                  Acted as substitute Product Owner when needed and collaborated closely with Product Management, Product Owners, and Support to continue feature delivery and clear communication.
+                  Acted as substitute Product Owner when needed and collaborated closely with Product Management, Product Owners, and Product Support to continue feature delivery and customer communication.
                 </p>
                 <ul class="chip-list">
                   <li>JavaScript</li>
@@ -197,7 +210,7 @@
             </article>
             <article class="section-item">
               <div class="year">
-                May 2022 - Dec 2022
+                <time datetime="2022-5">May 2022</time> - <time datetime="2022-12">Dec 2022</time>
               </div>
               <div>
                 <h3><a class="link" href="https://www.mysep.com/" target="_blank">Programmer | MySep Pte Ltd <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
@@ -218,7 +231,7 @@
             </article>
             <article class="section-item">
               <div class="year">
-                Jun 2021 - Aug 2021
+                <time datetime="2021-6">Jun 2021</time> - <time datetime="2021-8">Aug 2021</time>
               </div>
               <div>
                 <h3><a class="link" href="https://www.rocketsoftware.com/en-us/products/uniface" target="_blank">R&D Assistant | Uniface BV <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
@@ -236,7 +249,7 @@
             </article>
             <article class="section-item">
               <div class="year">
-                Jun 2020 - Oct 2020
+                <time datetime="2020-6">Jun 2020</time> - <time datetime="2020-10">Oct 2020</time>
               </div>
               <div>
                 <h3><a class="link" href="https://www.rocketsoftware.com/en-us/products/uniface" target="_blank">R&D Assistant | Uniface BV <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
@@ -254,7 +267,7 @@
               </div>
             </article>
             <div class="button">
-              <a href="Resume_Gerard_van_Schie.pdf">
+              <a class="background" href="Resume_Gerard_van_Schie.pdf">
                 <i class="fa-solid fa-download"></i> View Full Resume
               </a>
             </div>
@@ -272,6 +285,12 @@
                 The research looks at the viability to use these agents as substitutes for manual beta-testing, which still often happens.
                 Research concluded it could be used from early stages of development and is viable at speeding up testing and reducing manual labour.
               </p>
+              <ul class="chip-list">
+                <li>Java</li>
+                <li>Python</li>
+                <li>C++</li>
+                <li>Websockets</li>
+              </ul>
               <ul class="link-list">
                 <li>
                   <a href="https://studenttheses.uu.nl/handle/20.500.12932/48467" target="_blank"><i class="fa-solid fa-link"></i> Thesis paper</a>
@@ -285,12 +304,6 @@
                 <li>
                   <a href="https://www.nethack.org" target="_blank"><i class="fa-solid fa-link"></i> NetHack</a>
                 </li>
-              </ul>
-              <ul class="chip-list">
-                <li>Java</li>
-                <li>Python</li>
-                <li>C++</li>
-                <li>Websockets</li>
               </ul>
             </article>
             <article>
@@ -315,24 +328,29 @@
                 Made an orchestrated scalable solution with docker images and containers sharing tracking information to a single dashboard.
                 Additional effort was put into documenting the code with custom built linter rules.
               </p>
-              <ul class="link-list">
-                <li>
-                  <a href="https://github.com/ultralytics/yolov5" target="_blank"><i class="fa-solid fa-link"></i> YOLOv5</a>
-                </li>
-              </ul>
               <ul class="chip-list">
                 <li>Python</li>
                 <li>YOLOv5</li>
                 <li>Docker</li>
                 <li>GitHub Actions</li>
               </ul>
+              <ul class="link-list">
+                <li>
+                  <a href="https://github.com/ultralytics/yolov5" target="_blank"><i class="fa-solid fa-link"></i> YOLOv5</a>
+                </li>
+              </ul>
             </article>
+            <!-- <div class="button"> -->
+            <!--   <a class="background" href="projects.html"> -->
+            <!--     <i class="fa-solid fa-arrow-right"></i> View all projects -->
+            <!--   </a> -->
+            <!-- </div> -->
           </section>
           <footer>
             <p>
               Site made using HTML, CSS, and JS to last an entire career.
               Layout and design inspired from <a class="link" href="https://brittanychiang.com" target="_blank">Brittany Chiang</a>.
-              Using <a class="link" href="https://www.nerdfonts.com/font-downloads" target="_blank">0xProtoNerdFont</a> typefont, <a class="link" href="https://github.com/folke/tokyonight.nvim" target="_blank">TokyoNight colors</a>, and <a class="link" href="https://fontawesome.com" target="_blank">Font Awesome</a> for icons.
+              Using <a class="link" href="https://www.nerdfonts.com/font-downloads" target="_blank">0xProtoNerdFont</a> typecase, <a class="link" href="colors.html">TokyoNight</a> colors, and <a class="link" href="https://fontawesome.com" target="_blank">Font Awesome</a> for icons.
             </p>
           </footer>
         </div>

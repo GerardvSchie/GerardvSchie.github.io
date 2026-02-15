@@ -44,9 +44,9 @@ function setActiveLink(id) {
   document.querySelectorAll('nav > ol > li > a')
     .forEach(link => {
       if (link.getAttribute('href') === `#${id}`) {
-        link.classList.add('a-hover');
+        link.classList.add('a-selected');
       } else {
-        link.classList.remove('a-hover');
+        link.classList.remove('a-selected');
       }
   });
 }

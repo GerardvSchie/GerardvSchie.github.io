@@ -1,0 +1,31 @@
+body > div {
+  padding: 2em 30px;
+}
+
+.color-grid {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: var(--fs--1);
+  margin: 1em 0;
+}
+
+.color-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  width: 150px;
+  height: 100px;
+  margin: 5px;
+  border-radius: 5px;
+
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.color-name {
+  font-weight: bold;
+  text-align: center;
+}
+

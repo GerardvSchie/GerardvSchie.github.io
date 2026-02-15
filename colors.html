@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Gerard van Schie, showcase of the Tokyo Night Colorscheme used to build the site">
+    <title>Gerard van Schie</title>
+     <!-- Early styling to reduce flickering -->
+    <style>
+    html {
+      font-size: 17px;
+      font-family: monospace;
+      background: #1a1b26;
+      color: #c0caf5;
+    }
+    </style>
+
+    <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="preload" href="assets/0xProto/0xProtoNerdFont-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="colors.css">
+
+    <!-- Load the rest async, doesn't block rendering of the HTML -->
+    <link rel="preload" href="assets/fontawesome-free-7.1.0-web/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/fontawesome-free-7.1.0-web/css/solid.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+      <link rel="stylesheet" href="assets/fontawesome-free-7.1.0-web/css/fontawesome.css">
+      <link rel="stylesheet" href="assets/fontawesome-free-7.1.0-web/css/solid.css">
+    </noscript>
+    <script src="colors.js" defer></script>
+  </head>
+  <body>
+    <div>
+      <main>
+        <div class="button">
+          <a href="index.html">
+            <i class="fa-solid fa-arrow-left"></i> Gerard van Schie
+          </a>
+        </div>
+        <h1>Tokyo Night Colorscheme</h1>
+        <div class="color-grid"></div>
+      </main>
+      <footer>
+        <p>
+          Colors retrieved from the <a class="link" href="https://github.com/folke/tokyonight.nvim" target="_blank">Tokyonight.nvim</a> repository.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
