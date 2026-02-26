@@ -40,6 +40,7 @@ section:nth-of-type(4) h2 > span {
 #quote {
   color: var(--color-dark5);
   font-style: italic;
+  margin: var(--space-m) 0;
   /* reduces layout shifting */
   min-height: 2em;
 }
@@ -88,7 +89,7 @@ nav > ol {
 
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: var(--space-s);
 
   /* reduces layout shifting */
   min-height: var(--fs-2);
@@ -114,8 +115,25 @@ main {
   }
 }
 
+#about > article {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.vertical-spaced {
+  display: flex;
+  gap: var(--space-s);
+  flex-direction: column;
+}
+
 section {
-  padding-top: 16px;
+  /* For the navigation, so the text doesn't stick completely at the top */
+  padding-top: var(--space-l);
+
+  display: flex;
+  gap: var(--space-m);
+  flex-direction: column;
 
   * > hr {
     margin: 0;
@@ -126,16 +144,12 @@ section {
   .section-item {
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: var(--space-m);
 
     div:first-child {
       flex-shrink: 0;
-      width: 225px;
+      width: 200px;
     }
-  }
-
-  article {
-    margin: 1em 0 !important;
   }
 }
 
@@ -168,7 +182,7 @@ details[open] > ul {
   padding: 0 30px;
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  gap: var(--space-xl);
 }
 
 aside {
@@ -191,6 +205,6 @@ aside {
 }
 
 footer {
-  padding-top: 20px;
+  margin-top: var(--space-xl);
 }
 

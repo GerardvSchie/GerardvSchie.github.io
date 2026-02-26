@@ -114,6 +114,13 @@
   --color-blue-alpha: #7aa2f7c4;
   --color-bg-highlight-alpha: #292e42c4;
 
+  /* Spacing */
+  --space-s: 8px;
+  --space-m: 16px;
+  --space-l: 24px;
+  --space-xl: 48px;
+
+  /* Other browser capabilities */
   interpolate-size: allow-keywords;
 }
 
@@ -138,7 +145,8 @@ h1 { font-size: var(--fs-3); }
 h2 { font-size: var(--fs-2); }
 h3 { font-size: var(--fs-1); }
 
-body, h1, h2, h3 {
+/* Control spacing ourselves */
+body, h1, h2, h3, p, ul, ol {
   margin: 0;
 }
 
@@ -155,9 +163,8 @@ body, h1, h2, h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: var(--space-s);
   padding: unset;
-  margin: 0;
 
   li {
     border-radius: 30px;
@@ -170,24 +177,20 @@ body, h1, h2, h3 {
   background-color: var(--color-accent-green1-alpha);
 }
 
-.link-list {
-  margin: 1em 0;
+.link-list > li {
+  border-style: solid;
+  border-width: thin;
+  border-color: var(--color-fg-dark);
 
-  li {
-    border-style: solid;
-    border-width: thin;
-    border-color: var(--color-fg-dark);
+  a {
+    color: var(--color-fg-dark);
+  }
+
+  &:hover {
+    border-color: var(--color-blue-alpha);
 
     a {
-      color: var(--color-fg-dark);
-    }
-
-    &:hover {
-      border-color: var(--color-blue-alpha);
-
-      a {
-        color: var(--color-blue-alpha);
-      }
+      color: var(--color-blue-alpha);
     }
   }
 }
@@ -212,7 +215,6 @@ a {
 }
 
 .button {
-  margin: 8px 0;
   display: flex;
 
   a {
@@ -223,7 +225,6 @@ a {
     font-weight: bold;
     color: var(--color-blue);
   }
-
 }
 
 .background {

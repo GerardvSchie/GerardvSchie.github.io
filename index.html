@@ -16,7 +16,7 @@
       color: #c0caf5;
     }
     </style>
-    <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="assets/images/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="preload" href="assets/0xProto/0xProtoNerdFont-Regular_subset.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
@@ -25,6 +25,7 @@
     <link rel="preload" href="assets/fontawesome-free-7.1.0-web/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="assets/fontawesome-free-7.1.0-web/css/brands.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="assets/fontawesome-free-7.1.0-web/css/solid.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/fontawesome-free-7.1.0-web/css/regular.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
     <noscript>
       <link rel="stylesheet" href="assets/fontawesome-free-7.1.0-web/css/fontawesome.css">
@@ -95,7 +96,7 @@
           <section id="about">
             <article>
               <p>
-                I am a Full Stack Developer specialized in <span class="highlight">algorithms</span>, <span class="highlight">system design</span>, and <span class="highlight">maintainable software</span>. I focus on building reliable,
+                I am a Full Stack Developer specialized in <span class="highlight">algorithms</span>, <span class="highlight">programming languages</span>, and <span class="highlight">maintainable software</span>. I focus on building reliable,
                 production-ready solutions and am passionate about solving <span class="highlight">complex problems</span> by making them clear, scalable, and easy to maintain.
                 I actively seek challenging environments and projects where I can improve my skills, and contribute meaningful solutions.
               </p>
@@ -189,7 +190,7 @@
               <div class="year">
                 <time datetime="2023-12">Dec 2023</time> - <time datetime="present">Present</time>
               </div>
-              <div>
+              <div class="vertical-spaced">
                 <h3><a class="link" href="https://www.nexus-nederland.nl" target="_blank">Medior Full Stack Developer | NEXUS Nederland <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
                 <p>
                   Build, migrate and maintain critical components of a complete Mental Health Care web platform.
@@ -212,7 +213,7 @@
               <div class="year">
                 <time datetime="2022-5">May 2022</time> - <time datetime="2022-12">Dec 2022</time>
               </div>
-              <div>
+              <div class="vertical-spaced">
                 <h3><a class="link" href="https://www.mysep.com/" target="_blank">Programmer | MySep Pte Ltd <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
                 <p>
                   Migrated and tested portions VBA code to C# and wrote unit tests to ensure correctness.
@@ -233,7 +234,7 @@
               <div class="year">
                 <time datetime="2021-6">Jun 2021</time> - <time datetime="2021-8">Aug 2021</time>
               </div>
-              <div>
+              <div class="vertical-spaced">
                 <h3><a class="link" href="https://www.rocketsoftware.com/en-us/products/uniface" target="_blank">R&D Assistant | Uniface BV <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
                 <p>
                   Extended test coverage of application on other Linux platforms by adapting shell scripts and configuration of GitLab runners.
@@ -251,7 +252,7 @@
               <div class="year">
                 <time datetime="2020-6">Jun 2020</time> - <time datetime="2020-10">Oct 2020</time>
               </div>
-              <div>
+              <div class="vertical-spaced">
                 <h3><a class="link" href="https://www.rocketsoftware.com/en-us/products/uniface" target="_blank">R&D Assistant | Uniface BV <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
                 <p>
                   Completed a migration from IBM Synergy to Git, including many tests to ensure correctness.
@@ -267,8 +268,8 @@
               </div>
             </article>
             <div class="button">
-              <a class="background" href="Resume_Gerard_van_Schie.pdf">
-                <i class="fa-solid fa-download"></i> View Full Resume
+              <a class="background" href="assets/documents/Gerard van Schie Resume.pdf">
+                <i class="fa-regular fa-file-pdf"></i> View Full Resume
               </a>
             </div>
           </section>
@@ -277,7 +278,7 @@
               <h2><span>PRO</span>JECTS</h2>
               <hr aria-hidden="true">
             </div>
-            <article>
+            <article class="vertical-spaced">
               <h3>[Thesis] Using Intelligent Agent for Automated Testing of Computer Games</h3>
               <p>
                 Created an agent based testing testing strategy for the old complex game NetHack.
@@ -293,7 +294,7 @@
               </ul>
               <ul class="link-list">
                 <li>
-                  <a href="https://studenttheses.uu.nl/handle/20.500.12932/48467" target="_blank"><i class="fa-solid fa-link"></i> Thesis paper</a>
+                  <a href="assets/documents/Thesis_Gerard_van_Schie.pdf" target="_blank"><i class="fa-solid fa-link"></i> Thesis paper</a>
                 </li>
                 <li>
                   <a href="https://github.com/iv4xr-project/iv4xr-nethack" target="_blank"><i class="fa-solid fa-link"></i> Thesis code</a>
@@ -306,9 +307,9 @@
                 </li>
               </ul>
             </article>
-            <article>
+            <article class="vertical-spaced">
               <h3>Virtual music app</h3>
-             <p>
+              <p>
                 Created an app for a custom built jukebox project, acting like a spotify music app player where custom hooks can be attached to the actions.
                 It mimics a music server where multiple concurrent clients can connect to at the same time and updates are broadcast across all users.
                 Communication implemented is via serial connection. Planning to use this app for a future MIDI piano project.
@@ -321,7 +322,7 @@
                 <li>OpenAPI</li>
               </ul>
             </article>
-            <article>
+            <article class="vertical-spaced">
               <h3>[Bachelor project] Multi-camera surveillance and tracking</h3>
               <p>
                 Developed with a group of students a program to track people over several surveillance cameras.
