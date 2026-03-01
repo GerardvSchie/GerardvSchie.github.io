@@ -174,7 +174,17 @@ body, h1, h2, h3, p, ul, ol {
 
 .chip-list > li {
   color: var(--color-accent-green1);
-  background-color: var(--color-accent-green1-alpha);
+  border-style: solid;
+  border-width: thin;
+  border-color: var(--color-accent-green1);
+
+  display: flex;
+  gap: var(--space-s);
+  img, svg, i {
+    height: 1rem;
+    align-self: center;
+  }
+  /* background-color: var(--color-accent-green1-alpha); */
 }
 
 .link-list > li {
